@@ -10,9 +10,11 @@
 
 IN PROGRESS
 ⏳ **Next portfolio update in:**  
+## Countdown
 <!-- TIMER_START -->
-Time remaining: 11 days, 7 hours, 1 minutes
+Countdown updating...
 <!-- TIMER_END -->
+
 
 
 *(I update my profile every Sunday to track my progress.)*
