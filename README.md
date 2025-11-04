@@ -1,11 +1,18 @@
 # 👋 Hi, I'm Damian
-💫 About Me:
-🔭 I’m currently working on<br>
-👯 I’m looking to collaborate on<br>
-🤝 I’m looking for help with<br>
-🌱 I’m currently learning<br>
-💬 Ask me about<br>
-⚡ Fun fact
+### 💫 About Me:
+<p align="justify">
+With a background in geospatial engineering, I’m currently transitioning into data science and machine learning, fields that allow me to combine my analytical mindset with modern data-driven tools. I first became interested in ML while exploring 3D point cloud deformation analysis during my MSc studies. This experience sparked my curiosity and pushed me to dive deeper into Python, analytics, and model building. Since early 2025, I’ve been consistently developing my skills through hands-on projects and learning how to structure clean, modular, and automated workflows that reflect good data science practices.
+</p>
+### 🔭 Currently working on<br>
+
+- 👥 **Telco Customer Churn – IBM Dataset**  
+  Building a classification model to predict customer churn using structured service data. The project includes data cleaning, EDA, feature engineering, and model training with a modular Python pipeline.  
+
+- 🎧 **Spotify Churn – EDA & Baseline ML**  
+  Exploratory project focused on analyzing churn patterns in a music streaming dataset. Designed a preprocessing pipeline and tested baseline classifiers for churn prediction.  
+
+- 📄 **Cookiecutter ML Project Template**  
+  A lightweight, personal cookiecutter template for structuring end-to-end ML projects. Built to help individual data scientists organize code, data, and notebooks efficiently.  
 
 # 🖥️ Tech Stack:
 ![Python](https://img.shields.io/badge/python-3670A0?style=plastic&logo=python&logoColor=ffdd54) ![Anaconda](https://img.shields.io/badge/Anaconda-%2344A833.svg?style=plastic&logo=anaconda&logoColor=white) ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=plastic&logo=postgresql&logoColor=white) ![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=plastic&logo=mysql&logoColor=white) ![Canva](https://img.shields.io/badge/Canva-%2300C4CC.svg?style=plastic&logo=Canva&logoColor=white) ![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=plastic&logo=Matplotlib&logoColor=black) ![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=plastic&logo=numpy&logoColor=white) ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=plastic&logo=pandas&logoColor=white) ![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=plastic&logo=PyTorch&logoColor=white) ![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=plastic&logo=scikit-learn&logoColor=white) ![TensorFlow](https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=plastic&logo=TensorFlow&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=plastic&logo=github&logoColor=white) ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=plastic&logo=docker&logoColor=white) ![Power Bi](https://img.shields.io/badge/power_bi-F2C811?style=plastic&logo=powerbi&logoColor=black)
@@ -35,3 +42,5 @@
 <!-- TIMER_END -->
 *Timer resets automatically every second Sunday at 20:00 (PL time).*
 
+---
+### 👯 I’m looking to collaborate on data science and geospatial analytics projects
