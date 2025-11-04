@@ -2,7 +2,7 @@ name: Countdown Update
 
 on:
   schedule:
-    - cron: "0 * * * *" # every hour
+    - cron: "0 * * * *" # run every hour
   workflow_dispatch:
 
 permissions:
@@ -15,10 +15,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set target date (7 days from the next Sunday)
+      - name: Set target date (every 2nd Sunday at 20:00 PL time)
         id: setup
         run: |
-          TARGET_DATE=$(date -d "next sunday +7 days 19:00 UTC" -u +"%Y-%m-%dT00:00:00Z")
+          # Calculate next target: every 2nd Sunday at 20:00 Polish time (19:00 UTC)
+          TARGET_DATE=$(date -d "next sunday +14 days 19:00 UTC" -u +"%Y-%m-%dT%H:%M:%SZ")
           echo "TARGET_DATE=$TARGET_DATE" >> $GITHUB_ENV
 
       - name: Calculate remaining time
@@ -27,7 +28,7 @@ jobs:
           SECS_LEFT=$(( $(date -d "$TARGET_DATE" +%s) - $(date -d "$NOW" +%s) ))
 
           if [ $SECS_LEFT -lt 0 ]; then
-            TEXT="Countdown finished"
+            TEXT="Countdown finished 🎉"
           else
             DAYS=$((SECS_LEFT / 86400))
             HOURS=$(( (SECS_LEFT % 86400) / 3600 ))
@@ -35,6 +36,7 @@ jobs:
             TEXT="Time remaining: ${DAYS} days, ${HOURS} hours, ${MINUTES} minutes"
           fi
 
+          # Update section in README.md
           sed -i "/<!-- TIMER_START -->/,/<!-- TIMER_END -->/c\<!-- TIMER_START -->\n${TEXT}\n<!-- TIMER_END -->" README.md
 
       - name: Commit and push changes
