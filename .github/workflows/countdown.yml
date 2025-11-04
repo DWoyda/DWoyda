@@ -18,7 +18,7 @@ jobs:
       - name: Set target date (7 days from the next Sunday)
         id: setup
         run: |
-          TARGET_DATE=$(date -d "next sunday +7 days" -u +"%Y-%m-%dT00:00:00Z")
+          TARGET_DATE=$(date -d "next sunday +7 days 19:00 UTC" -u +"%Y-%m-%dT00:00:00Z")
           echo "TARGET_DATE=$TARGET_DATE" >> $GITHUB_ENV
 
       - name: Calculate remaining time
@@ -27,7 +27,7 @@ jobs:
           SECS_LEFT=$(( $(date -d "$TARGET_DATE" +%s) - $(date -d "$NOW" +%s) ))
 
           if [ $SECS_LEFT -lt 0 ]; then
-            TEXT="Countdown finished 🎉"
+            TEXT="Countdown finished"
           else
             DAYS=$((SECS_LEFT / 86400))
             HOURS=$(( (SECS_LEFT % 86400) / 3600 ))
