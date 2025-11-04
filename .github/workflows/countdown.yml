@@ -2,7 +2,7 @@ name: Countdown Update
 
 on:
   schedule:
-    - cron: "0 * * * *" # run every hour
+    - cron: "0 19 * * *" # run every day at 19:00 UTC (20:00 PL)
   workflow_dispatch:
 
 permissions:
