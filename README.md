@@ -10,7 +10,7 @@
 
 ⏳ **Next portfolio update**
 <!-- TIMER_START -->
-Calculating...
+11 days remaining
 <!-- TIMER_END -->
 🕒 *Timer resets automatically every second Sunday at 20:00 (PL time).*
 
