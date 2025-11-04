@@ -8,13 +8,9 @@
 ![](https://github-readme-stats.vercel.app/api?username=DWoyda&theme=vision-friendly-dark&hide_border=false&include_all_commits=false&count_private=true)<br/>
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=DWoyda&theme=vision-friendly-dark&hide_border=false&include_all_commits=false&count_private=true&layout=compact)
 
-IN PROGRESS
-⏳ **Next portfolio update in:**  
-## Countdown
+⏳ **Next portfolio update**
 <!-- TIMER_START -->
-11 days remaining
+Calculating...
 <!-- TIMER_END -->
+🕒 *Timer resets automatically every second Sunday at 20:00 (PL time).*
 
-
-
-*(I update my profile every 2nd Sunday to track my progress.)*
