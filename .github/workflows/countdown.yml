@@ -15,11 +15,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set target date (next Sunday at 20:00 PL time)
+      - name: Set target date (every 2nd Sunday at 20:00 PL time)
         id: setup
         run: |
-          # Calculate next Sunday 20:00 Polish time (19:00 UTC)
-          TARGET_DATE=$(date -d "next sunday 19:00 UTC" -u +"%Y-%m-%dT%H:%M:%SZ")
+          # Calculate next target: every 2nd Sunday at 20:00 Polish time (19:00 UTC)
+          TARGET_DATE=$(date -d "next sunday +7 days 19:00 UTC" -u +"%Y-%m-%dT%H:%M:%SZ")
           echo "TARGET_DATE=$TARGET_DATE" >> $GITHUB_ENV
 
       - name: Calculate remaining time
