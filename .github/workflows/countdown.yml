@@ -5,6 +5,9 @@ on:
     - cron: "0 * * * *" # every hour
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   update-countdown:
     runs-on: ubuntu-latest
@@ -24,7 +27,7 @@ jobs:
           SECS_LEFT=$(( $(date -d "$TARGET_DATE" +%s) - $(date -d "$NOW" +%s) ))
 
           if [ $SECS_LEFT -lt 0 ]; then
-            TEXT="Countdown finished"
+            TEXT="Countdown finished 🎉"
           else
             DAYS=$((SECS_LEFT / 86400))
             HOURS=$(( (SECS_LEFT % 86400) / 3600 ))
