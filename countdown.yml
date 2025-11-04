@@ -1,0 +1,43 @@
+name: ⏳ Update Countdown
+
+on:
+  schedule:
+    - cron: "0 * * * *"  # co godzinę
+  workflow_dispatch:      # pozwala też uruchomić ręcznie
+
+jobs:
+  update-countdown:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Update countdown in README
+        run: |
+          TARGET_DATE="2025-11-09T18:00:00+01:00"
+          NOW=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+          REMAINING=$(python3 - <<EOF
+from datetime import datetime, timezone
+target = datetime.fromisoformat("${TARGET_DATE}".replace("Z","+00:00"))
+now = datetime.now(timezone.utc)
+delta = target - now
+days = delta.days
+hours, remainder = divmod(delta.seconds, 3600)
+minutes, seconds = divmod(remainder, 60)
+print(f"{days} days {hours:02}h {minutes:02}m {seconds:02}s")
+EOF
+)
+          echo "Remaining time: $REMAINING"
+
+          sed -i "/<!-- countdown-start -->/,/<!-- countdown-end -->/c\\<!-- countdown-start -->\\
+$REMAINING\\
+<!-- countdown-end -->" README.md
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "⏳ update countdown" || echo "No changes to commit"
+          git push
