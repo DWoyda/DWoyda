@@ -10,8 +10,9 @@
 
 IN PROGRESS
 ⏳ **Next portfolio update in:**  
-<!-- countdown-start -->
-Calculating...
-<!-- countdown-end -->
+<!-- TIMER_START -->
+Countdown updating...
+<!-- TIMER_END -->
+
 
 *(I update my profile every Sunday to track my progress.)*
