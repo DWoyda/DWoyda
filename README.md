@@ -17,4 +17,4 @@ Time remaining: 12 days, 0 hours, 24 minutes
 
 
 
-*(I update my profile every Sunday to track my progress.)*
+*(I update my profile every 2nd Sunday to track my progress.)*
