@@ -22,7 +22,7 @@ jobs:
           TARGET_DATE=$(date -d "next sunday +7 days 19:00 UTC" -u +"%Y-%m-%dT%H:%M:%SZ")
           echo "TARGET_DATE=$TARGET_DATE" >> $GITHUB_ENV
 
-      - name: Calculate remaining time
+      - name: Calculate remaining days only
         run: |
           NOW=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
           SECS_LEFT=$(( $(date -d "$TARGET_DATE" +%s) - $(date -d "$NOW" +%s) ))
@@ -31,8 +31,7 @@ jobs:
             TEXT="Countdown finished 🎉"
           else
             DAYS=$((SECS_LEFT / 86400))
-            HOURS=$(( (SECS_LEFT % 86400) / 3600 ))
-            TEXT="Time remaining: ${DAYS} days, ${HOURS} hours"
+            TEXT="${DAYS} days remaining"
           fi
 
           # Update section in README.md
@@ -47,6 +46,6 @@ jobs:
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git
             git add README.md
-            git commit -m "Update countdown"
+            git commit -m "Update countdown (days only)"
             git push origin HEAD:${{ github.ref }}
           fi
