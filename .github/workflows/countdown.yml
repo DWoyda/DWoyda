@@ -14,20 +14,26 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Update countdown in README
+        shell: bash
         run: |
           TARGET_DATE="2025-11-09T18:00:00+01:00"
-          NOW=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
-          REMAINING=$(python3 - <<EOF
-from datetime import datetime, timezone
-target = datetime.fromisoformat("${TARGET_DATE}".replace("Z","+00:00"))
+
+          REMAINING=$(python3 <<'PYCODE'
+from datetime import datetime, timezone, timedelta
+import os
+
+target_str = "2025-11-09T18:00:00+01:00"
+target = datetime.fromisoformat(target_str.replace("Z", "+00:00"))
 now = datetime.now(timezone.utc)
 delta = target - now
+
 days = delta.days
 hours, remainder = divmod(delta.seconds, 3600)
 minutes, seconds = divmod(remainder, 60)
 print(f"{days} days {hours:02}h {minutes:02}m {seconds:02}s")
-EOF
+PYCODE
 )
+
           echo "Remaining time: $REMAINING"
 
           sed -i "/<!-- countdown-start -->/,/<!-- countdown-end -->/c\\<!-- countdown-start -->\\
