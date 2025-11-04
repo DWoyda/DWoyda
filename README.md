@@ -12,7 +12,7 @@ IN PROGRESS
 ⏳ **Next portfolio update in:**  
 ## Countdown
 <!-- TIMER_START -->
-Time remaining: 11 days, 23 hours
+11 days remaining
 <!-- TIMER_END -->
 
 
