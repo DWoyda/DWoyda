@@ -19,7 +19,7 @@ jobs:
         id: setup
         run: |
           # Calculate next target: every 2nd Sunday at 20:00 Polish time (19:00 UTC)
-          TARGET_DATE=$(date -d "next sunday +14 days 19:00 UTC" -u +"%Y-%m-%dT%H:%M:%SZ")
+          TARGET_DATE=$(date -d "next sunday +7 days 19:00 UTC" -u +"%Y-%m-%dT%H:%M:%SZ")
           echo "TARGET_DATE=$TARGET_DATE" >> $GITHUB_ENV
 
       - name: Calculate remaining time
