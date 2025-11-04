@@ -1,49 +1,35 @@
-name: ⏳ Update Countdown
+name: Countdown Update
 
 on:
   schedule:
-    - cron: "0 * * * *"  # co godzinę
-  workflow_dispatch:      # pozwala też uruchomić ręcznie
+    - cron: "0 * * * *" # every hour
+  workflow_dispatch:
 
 jobs:
   update-countdown:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repo
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Update countdown in README
-        shell: bash
+      - name: Set target date (7 days from the next Sunday)
+        id: setup
         run: |
-          TARGET_DATE="2025-11-09T18:00:00+01:00"
+          TARGET_DATE=$(date -d "next sunday +7 days" -u +"%Y-%m-%dT00:00:00Z")
+          echo "TARGET_DATE=$TARGET_DATE" >> $GITHUB_ENV
 
-          REMAINING=$(python3 <<'PYCODE'
-from datetime import datetime, timezone, timedelta
-import os
-
-target_str = "2025-11-09T18:00:00+01:00"
-target = datetime.fromisoformat(target_str.replace("Z", "+00:00"))
-now = datetime.now(timezone.utc)
-delta = target - now
-
-days = delta.days
-hours, remainder = divmod(delta.seconds, 3600)
-minutes, seconds = divmod(remainder, 60)
-print(f"{days} days {hours:02}h {minutes:02}m {seconds:02}s")
-PYCODE
-)
-
-          echo "Remaining time: $REMAINING"
-
-          sed -i "/<!-- countdown-start -->/,/<!-- countdown-end -->/c\\<!-- countdown-start -->\\
-$REMAINING\\
-<!-- countdown-end -->" README.md
-
-      - name: Commit and push changes
+      - name: Calculate remaining time
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md
-          git commit -m "⏳ update countdown" || echo "No changes to commit"
-          git push
+          NOW=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+          SECS_LEFT=$(( $(date -d "$TARGET_DATE" +%s) - $(date -d "$NOW" +%s) ))
+
+          if [ $SECS_LEFT -lt 0 ]; then
+            TEXT="Countdown finished 🎉"
+          else
+            DAYS=$((SECS_LEFT / 86400))
+            HOURS=$(( (SECS_LEFT % 86400) / 3600 ))
+            MINUTES=$(( (SECS_LEFT % 3600) / 60 ))
+            TEXT="Time remaining: ${DAYS} days, ${HOURS} hours, ${MINUTES} minutes"
+          fi
+
+          sed -i "/<!-- TIMER_START -->/,/<!-- TIMER_END -->/c\<!-- TIMER_START -->\n${TEXT}\n<!-- TIM_
