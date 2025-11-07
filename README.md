@@ -21,12 +21,12 @@ With a background in geospatial engineering, I’m currently transitioning into 
 # 📈 GitHub Stats:
 <p align="center">
   <img 
-    src="https://github-readme-stats.vercel.app/api?username=DWoyda&theme=vision-friendly-dark&show_icons=true&count_private=true&hide_border=false&include_all_commits=true&border_radius=15""
+    src="https://github-readme-stats.vercel.app/api?username=DWoyda&theme=vision-friendly-dark&show_icons=true&count_private=true&hide_border=false&include_all_commits=true&border_radius=15"
     alt="GitHub Stats" 
     width="45%" 
   />
   <img 
-    src="https://github-readme-stats.vercel.app/api/top-langs/?username=DWoyda&theme=vision-friendly-dark&layout=compact&count_private=true&hide_border=false&border_radius=19""
+    src="https://github-readme-stats.vercel.app/api/top-langs/?username=DWoyda&theme=vision-friendly-dark&layout=compact&count_private=true&hide_border=false&border_radius=19"
     alt="Top Languages" 
     width="40%" 
   />
