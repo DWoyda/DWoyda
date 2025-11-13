@@ -35,7 +35,7 @@ With a background in geospatial engineering, I’m currently transitioning into 
 ---
 ⏳ **Next portfolio update**
 <!-- TIMER_START -->
-10 days remaining
+9 days remaining
 <!-- TIMER_END -->
 *Timer resets automatically every second Sunday at 20:00 (PL time).*
 
