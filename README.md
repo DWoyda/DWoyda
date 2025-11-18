@@ -3,6 +3,7 @@
 <p align="justify">
 With a background in geospatial engineering, I’m currently transitioning into data science and machine learning, fields that allow me to combine my analytical mindset with modern data-driven tools. I first became interested in ML while exploring 3D point cloud deformation analysis during my MSc studies. This experience sparked my curiosity and pushed me to dive deeper into Python, analytics, and model building. Since early 2025, I’ve been consistently developing my skills through hands-on projects and learning how to structure clean, modular, and automated workflows that reflect good data science practices.
 </p>
+
 ### 🔭 Currently working on<br>
 
 - 👥 **Telco Customer Churn – IBM Dataset**  
