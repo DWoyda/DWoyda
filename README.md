@@ -20,18 +20,12 @@ With a background in geospatial engineering, I’m currently transitioning into 
 ![ChatGPT](https://img.shields.io/badge/chatGPT-74aa9c?style=plastic&logo=openai&logoColor=white) ![Google Gemini](https://img.shields.io/badge/google%20gemini-8E75B2?style=plastic&logo=google%20gemini&logoColor=white) ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=plastic&logo=visual-studio-code&logoColor=white) ![Markdown](https://img.shields.io/badge/markdown-%23000000.svg?style=plastic&logo=markdown&logoColor=white) ![Microsoft Excel](https://img.shields.io/badge/Microsoft_Excel-217346?style=plastic&logo=microsoft-excel&logoColor=white)
 
 # 📈 GitHub Stats:
+
 <p align="center">
-  <img 
-    src="https://github-readme-stats.vercel.app/api?username=DWoyda&theme=vision-friendly-dark&show_icons=true&count_private=true&hide_border=false&include_all_commits=true&border_radius=15"
-    alt="GitHub Stats" 
-    width="45%" 
-  />
-  <img 
-    src="https://github-readme-stats.vercel.app/api/top-langs/?username=DWoyda&theme=vision-friendly-dark&layout=compact&count_private=true&hide_border=false&border_radius=19"
-    alt="Top Languages" 
-    width="40%" 
-  />
+  <img src="https://nirzak-streak-stats.vercel.app/?user=DWoyda&theme=dark&hide_border=false" />
 </p>
+
+<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
 
 ---
 ⏳ **Next portfolio update**
